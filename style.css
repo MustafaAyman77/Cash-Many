@@ -1,39 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial;
-    background: #f4f4f4;
-    text-align: center;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1d2671, #c33764);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
-    background: white;
-    width: 300px;
-    margin: 100px auto;
-    padding: 20px;
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.95);
+    width: 340px;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    text-align: center;
+    animation: fadeIn 0.8s ease;
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #333;
 }
 
 button {
-    padding: 10px 20px;
+    width: 100%;
+    padding: 14px;
+    font-size: 17px;
     border: none;
-    background: #007bff;
-    color: white;
-    font-size: 16px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
     cursor: pointer;
-    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+button:disabled {
+    background: #aaa;
+    cursor: not-allowed;
 }
 
 #adBox {
     margin-top: 20px;
     padding: 20px;
-    background: #ffeeba;
-    border-radius: 8px;
+    background: linear-gradient(135deg, #fff3cd, #ffe8a1);
+    border-radius: 14px;
+    animation: pop 0.5s ease;
+}
+
+#adBox p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#timer {
+    font-size: 28px;
+    font-weight: bold;
+    color: #c0392b;
+}
+
+.views {
+    margin-top: 18px;
+    font-size: 16px;
+    color: #444;
 }
 
 .hidden {
     display: none;
 }
 
-.views {
-    margin-top: 15px;
-    font-weight: bold;
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
