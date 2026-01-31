@@ -1,0 +1,39 @@
+body {
+    font-family: Arial;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.container {
+    background: white;
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#adBox {
+    margin-top: 20px;
+    padding: 20px;
+    background: #ffeeba;
+    border-radius: 8px;
+}
+
+.hidden {
+    display: none;
+}
+
+.views {
+    margin-top: 15px;
+    font-weight: bold;
+}
